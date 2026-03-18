@@ -94,10 +94,10 @@
     const prevIndex = (index + items.length - 1) % items.length;
     const nextIndex = (index + 1) % items.length;
     document.getElementById("wppPrev").onclick = function () {
-      window.location.href = "http://warpstart.tilda.ws/product-" + String(prevIndex + 1).padStart(2, "0");
+      window.location.href = "https://warpstart.tilda.ws/product-" + String(prevIndex + 1).padStart(2, "0");
     };
     document.getElementById("wppNext").onclick = function () {
-      window.location.href = "http://warpstart.tilda.ws/product-" + String(nextIndex + 1).padStart(2, "0");
+      window.location.href = "https://warpstart.tilda.ws/product-" + String(nextIndex + 1).padStart(2, "0");
     };
     document.getElementById("wppClose").onclick = function () {
       window.location.href = "https://warpstart.tilda.ws/mag";
