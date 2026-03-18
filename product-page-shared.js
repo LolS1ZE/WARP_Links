@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const PRODUCTS_DATA_URL = "https://raw.githubusercontent.com/LolS1ZE/WARP_Links/main/products.csv";
   const fallbackVideo = "https://cdn.jsdelivr.net/gh/LolS1ZE/WARP_Links/0000-0090.mp4";
   const root = document.getElementById("warp-product-page");
@@ -94,13 +94,13 @@
     const prevIndex = (index + items.length - 1) % items.length;
     const nextIndex = (index + 1) % items.length;
     document.getElementById("wppPrev").onclick = function () {
-      window.location.href = "product-" + String(prevIndex + 1).padStart(2, "0") + ".html";
+      window.location.href = "http://warpstart.tilda.ws/product-" + String(prevIndex + 1).padStart(2, "0");
     };
     document.getElementById("wppNext").onclick = function () {
-      window.location.href = "product-" + String(nextIndex + 1).padStart(2, "0") + ".html";
+      window.location.href = "http://warpstart.tilda.ws/product-" + String(nextIndex + 1).padStart(2, "0");
     };
     document.getElementById("wppClose").onclick = function () {
-      window.location.href = "warp-player-slider-updated.html";
+      window.location.href = "https://warpstart.tilda.ws/mag";
     };
   }
 
