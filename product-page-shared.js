@@ -1,6 +1,6 @@
-﻿(function () {
+(function () {
   const PRODUCTS_DATA_URL = "https://raw.githubusercontent.com/LolS1ZE/WARP_Links/main/products.csv";
-  const fallbackVideo = "https://cdn.jsdelivr.net/gh/LolS1ZE/WARP_Links/0000-0090.mp4";
+  const fallbackVideo = "https://cdn.jsdelivr.net/gh/LolS1ZE/WARP_Links@main/0000-0090.mp4";
   const root = document.getElementById("warp-product-page");
   const index = Math.max(0, (parseInt(root.dataset.productIndex || "1", 10) || 1) - 1);
 
@@ -32,6 +32,13 @@
 
     if (url.indexOf("github.com") !== -1 && url.indexOf("/blob/") !== -1) {
       return url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/");
+    }
+
+    if (url.indexOf("https://cdn.jsdelivr.net/gh/LolS1ZE/WARP_Links/") === 0) {
+      return url.replace(
+        "https://cdn.jsdelivr.net/gh/LolS1ZE/WARP_Links/",
+        "https://cdn.jsdelivr.net/gh/LolS1ZE/WARP_Links@main/"
+      );
     }
 
     return url;
